@@ -1,6 +1,6 @@
 """
 Nassau Candy — Factory Reallocation & Shipping Optimization
-Streamlit App — Built on Real Data (Nassau_Candy_Distributor.csv)
+Streamlit App — Built on Real Data ("Nassau_Candy_Distributor.csv")
 Run: streamlit run streamlit_app.py
 Place Nassau_Candy_Distributor.csv in the same folder.
 """
@@ -68,7 +68,7 @@ def haversine(lat1,lon1,lat2,lon2):
 @st.cache_data
 def load_data():
     # Try loading real CSV, fall back to generating data
-    csv_path = "Nassau_Candy_Distributor.csv"
+    csv_path = ("Nassau_Candy_Distributor.csv")
     if os.path.exists(csv_path):
         df = pd.read_csv(csv_path)
         df['Order Date'] = pd.to_datetime(df['Order Date'], dayfirst=True)
